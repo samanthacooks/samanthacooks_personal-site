@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+   get '/about' => 'info#about', as: 'about'
+   get '/experience' => 'info#experience', as: 'experience'
+   get '/portfolio' => 'info#portfolio', as: 'portfolio'
+   get '/contact' => 'info#contact', as: 'contact'
+
+
+
+   root 'info#index'
 end
